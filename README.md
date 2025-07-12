@@ -1,60 +1,58 @@
-
-sistema-rh-java 💼🧑‍💻
-Simple Human Resources (HR) system developed in Java with MySQL database connection.
+basic-hr-system 💼🧑‍💻
+A simple Human Resources (HR) system developed in Java with MySQL database integration.
 
 📋 Description
-This project is a basic HR system that allows managing departments and employees, storing data in a MySQL database. The system provides functionalities to:
+This project is a basic HR system that allows managing departments and employees, storing data in a MySQL database. The system provides features to:
 
 🏢 Register departments and employees
-
 📄 List registered departments and employees
-
 💾 Export the employee list to a CSV file
+📊 Generate salary charts in PNG format
 
-📊 Generate salary charts for employees in PNG format
-
-The system uses JDBC for database connection and the JFreeChart library to generate charts.
+The system uses JDBC for database connection and the JFreeChart library for chart generation.
 
 🚀 Features
-Department Registration: 🏢 Add new departments to the database.
+Department Registration 🏢
+Add new departments to the database.
 
-Department Listing: 📋 Display all registered departments.
+Department Listing 📋
+Display all registered departments.
 
-Employee Registration: 👩‍💼 Insert employees linked to departments, with salary.
+Employee Registration 👩‍💼
+Add employees linked to departments, with salary data.
 
-Employee Listing: 📃 Display all employees with their departments and salaries.
+Employee Listing 📃
+Display all employees with their respective departments and salaries.
 
-CSV Export: 💾 Generate a employees.csv file with employee data.
+CSV Export 💾
+Generate an employees.csv file with employee data.
 
-Salary Chart: 📈 Create a bar chart salary_chart.png showing employees' salaries.
+Salary Chart 📈
+Create a bar chart (salary_chart.png) showing employee salaries.
 
 📁 Project Structure
 src/ — Java source code:
 
-Conexao.java — class for MySQL connection via JDBC 🔗
+Connection.java — Class for MySQL connection using JDBC 🔗
 
-Departamento.java — department model 🏢
+Department.java — Department model 🏢
 
-DepartamentoDAO.java — CRUD operations for departments 🛠️
+DepartmentDAO.java — CRUD operations for departments 🛠️
 
-Funcionario.java — employee model 👤
+Employee.java — Employee model 👤
 
-FuncionarioDAO.java — CRUD operations for employees and CSV export 📄
+EmployeeDAO.java — CRUD operations for employees and CSV export 📄
 
-Grafico.java — chart generation using JFreeChart 📊
+ChartGenerator.java — Salary chart generation using JFreeChart 📊
 
-Main.java — command line interface to interact with the system 🖥️
+Main.java — Command-line interface to interact with the system 🖥️
 
-lib/ — dependencies (e.g. JDBC driver, JFreeChart) 📦
-
-bin/ — compiled .class files 💾
-
-employees.csv — generated CSV file 💿
-
-salary_chart.png — generated salary chart image 🖼️
+lib/ — Dependencies (e.g., JDBC driver, JFreeChart) 📦
+bin/ — Compiled .class files 💾
+employees.csv — Generated CSV file 💿
+salary_chart.png — Generated salary chart image 🖼️
 
 🛠️ Technologies Used
->>>>>>> fc7d36e (Primeiro commit)
 Java 8+ ☕
 
 MySQL 🐬
@@ -63,15 +61,9 @@ JDBC 🔗
 
 JFreeChart 📊
 
-<<<<<<< HEAD
-⚙️ Como usar
-Configurar banco de dados MySQL
-Crie o banco rh com as tabelas departamentos e funcionarios:
-=======
 ⚙️ How to Use
 Set up MySQL database
-Create the rh database with the tables departamentos and funcionarios:
->>>>>>> fc7d36e (Primeiro commit)
+Create the rh database and the tables departamentos and funcionarios:
 
 sql
 Copiar
@@ -91,30 +83,16 @@ CREATE TABLE funcionarios (
   salario DOUBLE,
   FOREIGN KEY (departamento_id) REFERENCES departamentos(id)
 );
-<<<<<<< HEAD
-Ajustar credenciais de conexão
-No arquivo Conexao.java, configure usuário e senha MySQL:
-=======
 Adjust connection credentials
-In Conexao.java, configure MySQL username and password:
->>>>>>> fc7d36e (Primeiro commit)
+In the Connection.java file, set your MySQL username and password:
 
 java
 Copiar
 Editar
 private static final String USUARIO = "root";
 private static final String SENHA = "password";
-<<<<<<< HEAD
-Compilar e executar
-Compile o projeto e rode a classe Main para abrir o menu de comandos. ▶️
-
-Funcionalidades
-Utilize o menu para cadastrar, listar, exportar e gerar gráficos.
-
-=======
 Compile and run
 Compile the project and run the Main class to open the command menu. ▶️
 
-Features
-Use the menu to register, list, export, and generate charts.
->>>>>>> fc7d36e (Primeiro commit)
+System usage
+Use the command-line menu to register, list, export, and generate salary charts.
